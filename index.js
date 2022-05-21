@@ -40,6 +40,7 @@ incorrect = '맞히지 못하셨습니다. 다시 시도하세요';
 correctorincorrect = false;
 // 배열 선언
 label_output = ['시의 개념과 특성', '시적 화자'];
+
 AA = '시';
 BB = '정형시';
 CC = '자유시';
