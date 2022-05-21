@@ -822,7 +822,7 @@ function duplicate_check() {
         console.log(b);
     }
     else if (random10 == b[5]) {
-        a1 = b.silce(0, 5);
+        a1 = b.slice(0, 5);
         a2 = b.splice(6, 1);
         a3 = a1.concat(a2);
         b = a3;
@@ -891,6 +891,9 @@ function duplicate_check() {
     else if (random12 == b[3]) {
         a1 = b.slice(0, 3);
         a2 = b.splice(4, 1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
     }
     else if (random12 == b[4]) {
         b.pop();
@@ -902,14 +905,14 @@ function duplicate_check() {
         console.log(b);
     }
     else if (random13 == b[1]) {
-        a1 = b.slice(0, 3);
+        a1 = b.slice(0, 1);
         a2 = b.splice(2, 2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random13 == b[2]) {
-        a1 = b.slice(0, 4);
+        a1 = b.slice(0, 2);
         a2 = b.splice(3, 1);
         a3 = a1.concat(a2);
         b = a3;
@@ -925,13 +928,13 @@ function duplicate_check() {
         console.log(b);
     }
     else if (random14 == b[1]) {
-        a1 = b.slice(0, 3);
+        a1 = b.slice(0, 1);
         a2 = b.splice(2, 1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
-    else if (random14 == b[1]) {
+    else if (random14 == b[2]) {
         b.pop();
         console.log(b);
     }
@@ -944,7 +947,7 @@ function duplicate_check() {
         b.pop();
         console.log(b);
     }
-    const random16 = Math.floor(Math.random * b.length);
+    const random16 = b[Math.floor(Math.random() * b.length)];
     if (random16 == b[0]) {
         b.shift();
         console.log(b);
