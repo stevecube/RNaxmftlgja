@@ -53,7 +53,7 @@ T = '같거나, 비슷한 소리, 단어 반복';
 U = '일정한 위치에서 같은 말 반복';
 V = '문장 구조 반복';
 W = '의성어, 의태어 사용';
-b = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R];
+b = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T];
 correct = '맞히셨습니다.';
 incorrect = '맞히지 못하셨습니다. 다시 시도하세요';
 correctorincorrect = false;
@@ -82,7 +82,7 @@ TT = '운율 형성 방법 세 번째';
 UU = '운율 형성 방법 네 번째';
 VV = '운율 형성 방법 다섯 번째';
 WW = '운율 형성 방법 여섯 번째';
-label1_output = [AA, BB, CC, DD, EE, FF, GG, HH, II, JJ, KK, LL, MM, NN, OO, PP, QQ, RR];
+label1_output = [AA, BB, CC, DD, EE, FF, GG, HH, II, JJ, KK, LL, MM, NN, OO, PP, QQ, RR, SS, TT];
 label1.innerHTML = label_output[0];
 label2.innerHTML = label1_output[0] + start_2;
 outputt.innerHTML = '제출';
@@ -95,6 +95,7 @@ function change_1() {
 //  중복 체크 함수
 console.log(b);
 function duplicate_check() {
+    const number = b.length;
     const random1 = b[Math.floor(Math.random() * b.length)];
     if (random1 == b[0]) {
         b.shift();
@@ -102,117 +103,124 @@ function duplicate_check() {
     }
     else if (random1 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 16);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 15);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 14);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[4])  {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 13);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 12);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 11);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 10);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 9);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 8);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[10]) {
         a1 = b.slice(0, 10);
-        a2 = b.splice(11, 7);
+        a2 = b.splice(11, number-10);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[11]) {
         a1 = b.slice(0, 11);
-        a2 = b.splice(12, 6);
+        a2 = b.splice(12, number-11);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[12]) {
         a1 = b.slice(0, 12);
-        a2 = b.splice(13, 5);
+        a2 = b.splice(13, number-12);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[13]) {
         a1 = b.slice(0, 13);
-        a2 = b.splice(14, 4);
+        a2 = b.splice(14, number-13);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[14]) {
         a1 = b.slice(0, 14);
-        a2 = b.splice(15, 3);
+        a2 = b.splice(15, number-14);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[15]) {
         a1 = b.slice(0, 15);
-        a2 = b.splice(16, 2);
+        a2 = b.splice(16, number-15);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[16]) {
         a1 = b.slice(0, 16);
-        a2 = b.splice(17, 1);
+        a2 = b.splice(17, number-16);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random1 == b[17]) {
+        a1 = b.slice(0, 17);
+        a2 = b.splice(18, number-17);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random1 == b[18]) {
         b.pop();
         console.log(b);
     }
@@ -223,110 +231,117 @@ function duplicate_check() {
     }
     else if (random2 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 15);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 14);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 13);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 12);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 11);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 10);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 9);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 8);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 7);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[10]) {
         a1 = b.slice(0, 10);
-        a2 = b.splice(11, 6);
+        a2 = b.splice(11, number-10);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[11]) {
         a1 = b.slice(0, 11);
-        a2 = b.splice(12, 5);
+        a2 = b.splice(12, number-11);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[12]) {
         a1 = b.slice(0, 12);
-        a2 = b.splice(13, 4);
+        a2 = b.splice(13, number-12);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[13]) {
         a1 = b.slice(0, 13);
-        a2 = b.splice(14, 3);
+        a2 = b.splice(14, number-13);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[14]) {
         a1 = b.slice(0, 14);
-        a2 = b.splice(15, 2);
+        a2 = b.splice(15, number-14);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[15]) {
         a1 = b.slice(0, 15);
-        a2 = b.splice(16, 1);
+        a2 = b.splice(16, number-15);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random2 == b[16]) {
+        a1 = b.slice(0, 16);
+        a2 = b.splice(17, number-16);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random2 == b[17]) {
         b.pop();
         console.log(b);
     }
@@ -337,103 +352,110 @@ function duplicate_check() {
     }
     else if (random3 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 14);
+        a2 = b.splice(2, number-1-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 13);
+        a2 = b.splice(3, number-2-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 12);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 11);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 10);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 9);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 8);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 7);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 6);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[10]) {
         a1 = b.slice(0, 10);
-        a2 = b.splice(11, 5);
+        a2 = b.splice(11, number-10);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[11]) {
         a1 = b.slice(0, 11);
-        a2 = b.splice(12, 4);
+        a2 = b.splice(12, number-11);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[12]) {
         a1 = b.slice(0, 12);
-        a2 = b.splice(13, 3);
+        a2 = b.splice(13, number-12);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[13]) {
         a1 = b.slice(0, 13);
-        a2 = b.splice(14, 2);
+        a2 = b.splice(14, number-13);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[14]) {
         a1 = b.slice(0, 14);
-        a2 = b.splice(15, 1);
+        a2 = b.splice(15, number-14);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random3 == b[15]) {
+        a1 = b.slice(0, 15);
+        a2 = b.splice(16, number-15);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random3 == b[16]) {
         b.pop();
         console.log(b);
     }
@@ -444,96 +466,103 @@ function duplicate_check() {
     }
     else if (random4 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 13);
+        a2 = b.splice(2, number-1-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 12);
+        a2 = b.splice(3, number-2-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 11);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 10);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 9);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 8);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 7);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 6);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 5);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[10]) {
         a1 = b.slice(0, 10);
-        a2 = b.splice(11, 4);
+        a2 = b.splice(11, number-10);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[11]) {
         a1 = b.slice(0, 11);
-        a2 = b.splice(12, 3);
+        a2 = b.splice(12, number-11);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[12]) {
         a1 = b.slice(0, 12);
-        a2 = b.splice(13, 2);
+        a2 = b.splice(13, number-12);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[13]) {
         a1 = b.slice(0, 13);
-        a2 = b.splice(14, 1);
+        a2 = b.splice(14, number-13);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random4 == b[14]) {
+        a1 = b.slice(0, 14);
+        a2 = b.splice(15, number-14);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random4 == b[15]) {
         b.pop();
         console.log(b);
     }
@@ -544,89 +573,96 @@ function duplicate_check() {
     }
     else if (random5 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 12);
+        a2 = b.splice(2, number-1-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 11);
+        a2 = b.splice(3, number-2-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 10);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 9);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 8);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 7);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 6);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 5);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 4);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[10]) {
         a1 = b.slice(0, 10);
-        a2 = b.splice(11, 3);
+        a2 = b.splice(11, number-10);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[11]) {
         a1 = b.slice(0, 11);
-        a2 = b.splice(12, 2);
+        a2 = b.splice(12, number-11);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[12]) {
         a1 = b.slice(0, 12);
-        a2 = b.splice(13, 1);
+        a2 = b.splice(13, number-12);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random5 == b[13]) {
+        a1 = b.slice(0, 13);
+        a2 = b.splice(14, number-13);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random5 == b[14]) {
         b.pop();
         console.log(b);
     }
@@ -637,82 +673,89 @@ function duplicate_check() {
     }
     else if (random6 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 11);
+        a2 = b.splice(2, number-1-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 10);
+        a2 = b.splice(3, number-2-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 9);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 8);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 7);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b =  a3;
         console.log(b);
     }
     else if (random6 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 6);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 5);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 4);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 3);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[10]) {
         a1 = b.slice(0, 10);
-        a2 = b.splice(11, 2);
+        a2 = b.splice(11, number-10);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[11]) {
         a1 = b.slice(0, 11);
-        a2 = b.splice(12, 1);
+        a2 = b.splice(12, number-11);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random6 == b[12]) {
+        a1 = b.slice(0, 12);
+        a2 = b.splice(13, number-12);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random6 == b[13]) {
         b.pop();
         console.log(b);
     }
@@ -723,75 +766,82 @@ function duplicate_check() {
     }
     else if (random7 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 10);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 9);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 8);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 7);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 6);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 5);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 4);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 3);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 2);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[10]) {
         a1 = b.slice(0, 10);
-        a2 = b.splice(11, 1);
+        a2 = b.splice(11, number-10);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random7 == b[11]) {
+        a1 = b.slice(0, 11);
+        a2 = b.splice(12, number-11);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random7 == b[12]) {
         b.pop();
         console.log(b);
     }
@@ -802,68 +852,75 @@ function duplicate_check() {
     }
     else if (random8 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 9);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random8 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 8);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random8 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 7);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random8 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 6);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random8 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 5);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random8 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 4);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random8 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 3);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random8 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 2);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if(random8 == b[9]) {
         a1 = b.slice(0, 9);
-        a2 = b.splice(10, 1);
+        a2 = b.splice(10, number-9);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
-    else if(random8 == b[10]) {
+    else if (random8 == b[10]) {
+        a1 = b.slice(0, 10);
+        a2 = b.splice(11, number-10);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random8 == b[11]) {
         b.pop();
         console.log(b);
     }
@@ -874,61 +931,75 @@ function duplicate_check() {
     }
     else if (random9 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 8);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 7);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 6);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 5);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 4);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 3);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 2);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[8]) {
         a1 = b.slice(0, 8);
-        a2 = b.splice(9, 1);
+        a2 = b.splice(9, number-8);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random9 == b[9]) {
+        a1 = b.slice(0, 9);
+        a2 = b.splice(10, number-9);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random9 == b[10]) {
+        a1 = b.slice(0, 10);
+        a2 = b.splice(11, number-10);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random9 == b[11]) {
         b.pop();
         console.log(b);
     }
@@ -939,54 +1010,68 @@ function duplicate_check() {
     }
     else if (random10 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 7);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random10 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 6);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random10 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 5);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random10 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 4);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random10 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 3);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random10 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 2);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random10 == b[7]) {
         a1 = b.slice(0, 7);
-        a2 = b.splice(8, 1);
+        a2 = b.splice(8, number-7);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random10 == b[8]) {
+        a1 = b.slice(0, 8);
+        a2 = b.splice(9, number-8);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random10 == b[9]) {
+        a1 = b.slice(0, 9);
+        a2 = b.splice(10, number-9);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random10 == b[10]) {
         b.pop();
         console.log(b);
     }
@@ -997,47 +1082,61 @@ function duplicate_check() {
     }
     else if (random11 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 6);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random11 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 5);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random11 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 4);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random11 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 3);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random11 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 2);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random11 == b[6]) {
         a1 = b.slice(0, 6);
-        a2 = b.splice(7, 1);
+        a2 = b.splice(7, number-6);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random11 == b[7]) {
+        a1 = b.slice(0, 7);
+        a2 = b.splice(8, number-7);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random11 == b[8]) {
+        a1 = b.slice(0, 8);
+        a2 = b.splice(9, number-8);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random11 == b[9]) {
         b.pop();
         console.log(b);
     }
@@ -1048,40 +1147,54 @@ function duplicate_check() {
     }
     else if (random12 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 5);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random12 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 4);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random12 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 3);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random12 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 2);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random12 == b[5]) {
         a1 = b.slice(0, 5);
-        a2 = b.splice(6, 1);
+        a2 = b.splice(6, number-5);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random12 == b[6]) {
+        a1 = b.slice(0, 6);
+        a2 = b.splice(7, number-6);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random12 == b[7]) {
+        a1 = b.slice(0, 7);
+        a2 = b.splice(8, number-7);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random12 == b[8]) {
         b.pop();
         console.log(b);
     }
@@ -1092,33 +1205,47 @@ function duplicate_check() {
     }
     else if (random13 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 4);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random13 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 3);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random13 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 2);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random13 == b[4]) {
         a1 = b.slice(0, 4);
-        a2 = b.splice(5, 1);
+        a2 = b.splice(5, number-4);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random13 == b[5]) {
+        a1 = b.slice(0, 5);
+        a2 = b.splice(6, number-5);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random13 == b[6]) {
+        a1 = b.slice(0, 6);
+        a2 = b.splice(7, number-6);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random13 == b[7]) {
         b.pop();
         console.log(b);
     }
@@ -1129,26 +1256,40 @@ function duplicate_check() {
     }
     else if (random14 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 3);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random14 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 2);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random14 == b[3]) {
         a1 = b.slice(0, 3);
-        a2 = b.splice(4, 1);
+        a2 = b.splice(4, number-3);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random14 == b[4]) {
+        a1 = b.slice(0, 4);
+        a2 = b.splice(5, number-4);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random14 == b[5]) {
+        a1 = b.slice(0, 5);
+        a2 = b.splice(6, number-5);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random14 == b[6]) {
         b.pop();
         console.log(b);
     }
@@ -1159,19 +1300,33 @@ function duplicate_check() {
     }
     else if (random15 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 2);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random15 == b[2]) {
         a1 = b.slice(0, 2);
-        a2 = b.splice(3, 1);
+        a2 = b.splice(3, number-2);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random15 == b[3]) {
+        a1 = b.slice(0, 3);
+        a2 = b.splice(4, number-3);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random15 == b[4]) {
+        a1 = b.slice(0, 4);
+        a2 = b.splice(5, number-4);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random15 == b[5]) {
         b.pop();
         console.log(b);
     }
@@ -1182,12 +1337,26 @@ function duplicate_check() {
     }
     else if (random16 == b[1]) {
         a1 = b.slice(0, 1);
-        a2 = b.splice(2, 1);
+        a2 = b.splice(2, number-1);
         a3 = a1.concat(a2);
         b = a3;
         console.log(b);
     }
     else if (random16 == b[2]) {
+        a1 = b.slice(0, 2);
+        a2 = b.splice(3, number-2);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random16 == b[3]) {
+        a1 = b.slice(0, 3);
+        a2 = b.splice(4, number-3);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random16 == b[4]) {
         b.pop();
         console.log(b);
     }
@@ -1197,11 +1366,50 @@ function duplicate_check() {
         console.log(b);
     }
     else if (random17 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, number-1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random17 == b[2]) {
+        a1 = b.slice(0, 2);
+        a2 = b.splice(3, number-2);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random17 == b[3]) {
         b.pop();
         console.log(b);
     }
     const random18 = b[Math.floor(Math.random() * b.length)];
     if (random18 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random18 == b[1]) {
+        a1 = b.slice(0, 1);
+        a2 = b.splice(2, number-1);
+        a3 = a1.concat(a2);
+        b = a3;
+        console.log(b);
+    }
+    else if (random18 == b[2]) {
+        b.pop();
+        console.log(b);
+    }
+    const random19 = b[Math.floor(Math.random() * b.length)];
+    if (random19 == b[0]) {
+        b.shift();
+        console.log(b);
+    }
+    else if (random19 == b[2]) {
+        b.pop();
+        console.log(b);
+    }
+    const random20 = b[Math.floor(Math.random() * b.length)];
+    if (random20 == b[0]) {
         b.shift();
         console.log(b);
     }
@@ -1223,6 +1431,8 @@ function duplicate_check() {
     sixteenth.innerHTML = random16;
     seventeenth.innerHTML = random17;
     eightteenth.innerHTML = random18;
+    nineteenth.innerHTML = random19;
+    twelfth.innerHTML = random20;
 }
 duplicate_check();
 outputt.addEventListener('click', function() {
