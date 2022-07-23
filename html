@@ -1,0 +1,78 @@
+const question = document.getElementById('question');
+const answer = document.getElementById('answer');
+const check = document.getElementById('correctincorrectcheck');
+const first = document.getElementById('first');
+const second = document.getElementById('second');
+const third = document.getElementById('third');
+const forth = document.getElementById('forth');
+
+const question1 = '품사';
+const question2 = '단어';
+const question3 = '분류기준 - 형태'
+
+const answer1 = '단어를 일정한 기준에 따라 나누어 공통된 성질을 가진 것끼리 묶은 갈래';
+const answer2 = '홀로 쓰일 수 있는 말 또는 홀로 쓰일 수 있는 말에 붙어 쉽게 떨어지지 않는 말'
+const answer3 = "단어는 문장에서 쓰일 때 형태가 변하는지에 따라 '불변어(형태가 변하지 않는 단어)와 가변어(형태가 변하는 단어)'로 나뉨"
+
+const eqal = ': ';
+
+let questions = [
+    question1,
+    question2,
+    question3,
+]
+let answers = [
+    answer1,
+    answer2,
+    answer3,
+]
+let number = questions.length;
+
+function change() {
+    level = 0;
+    question.innerHTML = question[lo] + eqal
+}
+
+function index_1(a) {
+    if (a == answers[0]) {
+        answers.shift();
+        console.log(answers);
+    }
+}
+function index_2(a) {
+    if (a == answers[1]) {
+        a1 = answers.slice(0, 1);
+        a2 = answers.splice(2, number-1);
+        answers = a1.concat(a2);
+        console.log(answers);
+    }
+}
+function index_3(a) {
+    if (a == answers[2]) {
+        a1 = answers.slice(0, 2);
+        a2 = answers.splice(3, number-2);
+        answers = a1.concat(a2);
+        console.log(answers)
+    }
+}
+console.log(answers);
+function shuffle() {
+    const random1 = answers[Math.floor(Math.random() * answers.length)];
+    index_1(random1);
+    index_2(random1);
+    index_3(random1);
+    const random2 = answers[Math.floor(Math.random() * answers.length)];
+    index_1(random2);
+    index_2(random2);
+    const random3 = answers[Math.floor(Math.random() * answers.length)];
+    index_1(random3);
+    first.innerHTML = random1;
+    second.innerHTML = random2;
+}
+shuffle();
+check.addEventListener('click', checkclick)
+function checkclick() {
+    checkinput = answer.value;
+    console.log(checkinput)
+    question.innerHTML = 'd' + eqal;
+}
